@@ -1,0 +1,143 @@
+<div *ngIf="titles">
+<div class="page-header page-header-xs" data-parallax="true" style="background-image: url('./assets/img/DB_analyse.jpg');">
+  <div class="container">
+    <div class="carousel-caption text-left">
+      <h2>DB照会</h2>
+    </div>
+  </div>
+</div>
+
+  <div class="main">
+    <div class="section text-center">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12 mr-auto ml-auto">
+                  <h3 class="title">登録されているDB内容を照会</h3>
+                  <h5 class="description">当アプリケーションと接続をしているDataBaseの内容を確認します。</h5>
+                  <h5 class="description">ブロックチェーンネットワークにより企業間データ転送した結果を確認することが可能です。</h5>
+                  <!-- <br>
+                  <a href="#paper-kit" class="btn btn-danger btn-round">See Details</a> -->
+              </div>
+          </div>
+          <br/><br/>
+          <div class="row">
+              <div class="col-md-4">
+                  <div class="info">
+                      <div class="icon icon-danger">
+                          <i class="nc-icon nc-album-2"></i>
+                      </div>
+                      <div class="description">
+                          <h5 class="info-title">{{'在庫連携データ'}}</h5>
+                          <a href="#pkp" class="btn btn-link btn-danger">Link</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="info">
+                      <div class="icon icon-danger">
+                          <i class="nc-icon nc-bulb-63"></i>
+                      </div>
+                      <div class="description">
+                          <h5 class="info-title">{{'請求データ'}}</h5>
+                          <a href="#pkp" class="btn btn-link btn-danger">Link</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="info">
+                      <div class="icon icon-danger">
+                          <i class="nc-icon nc-chart-bar-32"></i>
+                      </div>
+                      <div class="description">
+                          <h5 class="info-title">{{'債務データ'}}</h5>
+                          <a href="#pkp" class="btn btn-link btn-danger">Link</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+    </div>
+    
+
+      <div class="container marketing">
+
+        <h2>在庫連携データ</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Material</th>
+              <th>Description</th>
+              <th>Unit price</th>
+              <th>Quantity</th>
+              <th>Lot</th>
+              <th>Carbon</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+              <td>{{ product.material}}</td>
+              <td>{{ product.description}}</td>
+              <td>{{ product.unit_price}}</td>
+              <td>{{ product.quantity}}</td>
+              <td>{{ product.lot}}</td>
+              <td>{{ product.carbon}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>請求データ</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Invoice Number</th>
+              <th>Description</th>
+              <th>Invoice Date</th>
+              <th>Amount</th>
+              <th>Due Date</th>
+              <th>Product</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let billing of billings">
+              <td>{{ billing.invoice_number}}</td>
+              <td>{{ billing.description}}</td>
+              <td>{{ billing.invoice_date}}</td>
+              <td>{{ billing.amount}}</td>
+              <td>{{ billing.due_date}}</td>
+              <td>{{ billing.product}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>債務データ</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Invoice Number</th>
+              <th>Description</th>
+              <th>Invoice Date</th>
+              <th>Amount</th>
+              <th>Due Date</th>
+              <th>Product</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let debt of debts">
+              <td>{{ debt.invoice_number}}</td>
+              <td>{{ debt.description}}</td>
+              <td>{{ debt.invoice_date}}</td>
+              <td>{{ debt.amount}}</td>
+              <td>{{ debt.due_date}}</td>
+              <td>{{ debt.product}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2023 xxxx, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</div>

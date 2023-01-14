@@ -12,6 +12,9 @@ import { NavbarComponent } from './common/navbar/navbar.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   private _router!: Subscription;
   @ViewChild(NavbarComponent) navbar!: NavbarComponent;
  

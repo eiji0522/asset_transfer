@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('./assets/img/phone-cover.jpg');">
+  </div>
+
+  <div class="container text-center">
+    <br>
+    <div class="row">
+      <div *ngFor="let title of titles; let indexId = index" class="col-sm">  
+      <a [routerLink]= "title.id">  
+        <div class="card">
+          <img src="{{ title.coverImage }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> {{title.name}} </h5>
+            <p class="card-text">{{ title.description}}</p>
+          </div>
+        </div>
+      </a>
+  </div>
+</div>

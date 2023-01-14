@@ -1,11 +1,25 @@
 const express = require('express')
 const router = express.Router()
 const Product = require('../model/product')
+const Billing = require('../model/billing')
+const Debt = require('../model/debt')
 
-router.get('', function(req, res){
-    Product.find({}, function(err, foundProducts) {
-      return res.json(foundProducts)
-    })
+router.get('/db-analyze', function(req, res){
+  Product.find({}, function(err, foundProducts) {
+    return res.json(foundProducts)
+  })
+})
+
+router.get('/db-analyze2', function(req, res){
+  Billing.find({}, function(err, foundBillings) {
+    return res.json(foundBillings)
+  })
+})
+
+router.get('/db-analyze3', function(req, res){
+  Debt.find({}, function(err, foundDebts) {
+    return res.json(foundDebts)
+  })
 })
 
 router.get('/:productId', function(req, res){
