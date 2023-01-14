@@ -6,6 +6,7 @@ const FakeDb = require('./fake-db')
 const productRoutes = require('./routes/products')
 const path = require('path')
 
+mongoose.set('strictQuery', true);
 mongoose.connect(config.DB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -13,7 +14,7 @@ mongoose.connect(config.DB_URI, {
     () => {
         if(process.env.NODE_ENV !== 'production') {
             const fakeDb = new FakeDb()
-            // fakeDb.initDb()
+            fakeDb.initDb()
         }
     }
 )
@@ -23,7 +24,7 @@ const app = express()
 app.use('/api/v1/products', productRoutes)
 
 if(process.env.NODE_ENV === 'production') {
-    const appPath = path.join( __dirname, '..', 'dist', 'reservation-app')
+    const appPath = path.join( __dirname, '..', 'dist', 'asset_transfer')
     app.use(express.static(appPath))
     app.get("*", function(req, res){
         res.sendFile(path.resolve(appPath, 'index.html'))

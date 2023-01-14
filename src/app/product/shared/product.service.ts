@@ -8,7 +8,15 @@ export class ProductService {
     constructor(private http: HttpClient) { }
 
     getProducts(): Observable<any> {
-        return this.http.get('/api/v1/products')
+        return this.http.get('/api/v1/products/db-analyze')
+    }
+
+    getBillings(): Observable<any> {
+        return this.http.get('/api/v1/products/db-analyze2')
+    }
+
+    getDebts(): Observable<any> {
+        return this.http.get('/api/v1/products/db-analyze3')
     }
 
     getProductById(productId: string):Observable<any> {
