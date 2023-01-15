@@ -8,20 +8,28 @@ export class ProductService {
     constructor(private http: HttpClient) { }
 
     getProducts(): Observable<any> {
-        return this.http.get('/api/v1/products/db-analyze')
+        //20230115 変更(Start)
+        // return this.http.get('/api/v1/products/db-analyze')
+        return this.http.get('/api/v1/products/db-analyze/product-data')
+        //20230115 変更(End)
     }
 
     getBillings(): Observable<any> {
-        return this.http.get('/api/v1/products/db-analyze2')
+        //20230115 変更(Start)
+        // return this.http.get('/api/v1/products/db-analyze2')
+        return this.http.get('/api/v1/products/db-analyze/billing-data')        
+        //20230115 変更(End)
     }
 
     getDebts(): Observable<any> {
-        return this.http.get('/api/v1/products/db-analyze3')
+        //20230115 変更(Start)        
+        // return this.http.get('/api/v1/products/db-analyze3')
+        return this.http.get('/api/v1/products/db-analyze/debt-data')        
+        //20230115 変更(End)
     }
-
-    getProductById(productId: string):Observable<any> {
-        return this.http.get('/api/v1/products/' + productId)
+    //20230115 変更(Start)       
+    // getProductById(productId: string):Observable<any> {
+    //     return this.http.get('/api/v1/products/' + productId)
+    //20230115 変更(End)       
 
     }
-
-}
