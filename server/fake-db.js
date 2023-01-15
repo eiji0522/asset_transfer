@@ -77,28 +77,28 @@ class FakeDb {
 
         this.debts = [
             {
-                invoice_number: 'B000000001',
+                invoice_number: 'B000000091',
                 description: '1月請求書',
-                invoice_date: 20230101,
-                amount: 1500000,
-                due_date: 20230125,
-                product: 'M000000001'
+                invoice_date: 20230115,
+                amount: 3450000,
+                due_date: 20230131,
+                product: 'M000000091'
             },
             {
-                invoice_number: 'B000000002',
+                invoice_number: 'B000000092',
                 description: '2月請求書',
-                invoice_date: 20230201,
-                amount: 1000000,
-                due_date: 20230225,
-                product: 'M000000002'
+                invoice_date: 20230220,
+                amount: 850000,
+                due_date: 20230228,
+                product: 'M000000092'
             },
             {
-                invoice_number: 'B000000003',
+                invoice_number: 'B000000093',
                 description: '3月請求書',
-                invoice_date: 20230301,
-                amount: 2250000,
-                due_date: 20230325,
-                product: 'M000000003'
+                invoice_date: 20230330,
+                amount: 1250000,
+                due_date: 20230331,
+                product: 'M000000093'
             }
         ]
     }

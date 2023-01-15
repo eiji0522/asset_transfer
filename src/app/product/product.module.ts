@@ -7,6 +7,9 @@ import { ProductComponent } from './product.component';
 import { ProductService } from './shared/product.service';
 import { DataTransferComponent } from './data-transfer/data-transfer.component';
 import { TbdComponent } from './tbd/tbd.component';
+import { ProductDataComponent } from './db-analyze/product-data/product-data.component';
+import { BillingDataComponent } from './db-analyze/billing-data/billing-data.component';
+import { DebtDataComponent } from './db-analyze/debt-data/debt-data.component';
 
 const routes: Routes =[
   {
@@ -15,7 +18,12 @@ const routes: Routes =[
       { path: '', component: InitialScreenComponent },
       { path: 'db-analyze', component: DbAnalyzeComponent },
       { path: 'data-transfer', component: DataTransferComponent },          
-      { path: 'tbd', component: TbdComponent }       
+      { path: 'tbd', component: TbdComponent },
+      //20230115 変更(Start)
+      { path: 'db-analyze/product-data', component: ProductDataComponent },
+      { path: 'db-analyze/billing-data', component: BillingDataComponent },
+      { path: 'db-analyze/debt-data', component: DebtDataComponent }           
+      //20230115 変更(End)
     ]
    }
 ];
@@ -25,7 +33,10 @@ const routes: Routes =[
     DbAnalyzeComponent,
     InitialScreenComponent,
     DataTransferComponent,
-    TbdComponent
+    TbdComponent,
+    ProductDataComponent,
+    BillingDataComponent,
+    DebtDataComponent
   ],
   imports: [
     RouterModule.forChild(routes),
