@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "reservation-app": {
+    "asset_transfer": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/reservation-app",
+            "outputPath": "dist/asset_transfer",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "reservation-app:build:production"
+              "browserTarget": "asset_transfer:build:production"
             },
             "development": {
-              "browserTarget": "reservation-app:build:development"
+              "browserTarget": "asset_transfer:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "reservation-app:build"
+            "browserTarget": "asset_transfer:build"
           }
         },
         "test": {
