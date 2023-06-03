@@ -1,0 +1,66 @@
+<div class="page-header page-header-xs" data-parallax="true" style="background-image: url('./assets/img/Data_update.jpg');">
+    <div class="container">
+    <div class="carousel-caption text-left">
+        <h2>データ更新</h2>
+    </div>
+    </div>
+</div>
+
+<div class="main">
+    <div class="section text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mr-auto ml-auto">
+                <h3 class="title">DBの内容を更新</h3>
+                <h5 class="description">ブロックチェーンネットワークにアクセスし、企業間連携の最新結果を取得します。</h5>
+                <h5 class="description">取得したデータをもとに、DataBase内容を更新します。</h5>
+            </div>
+        </div>
+        <br/><br/>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="info">
+                    <div class="icon icon-danger">
+                        <i class="nc-icon nc-album-2"></i>
+                    </div>
+                    <div class="description">
+                        <h5 class="info-title">{{'在庫連携データ'}}</h5>
+                        <!-- <a routerLink = "product-data" class="btn btn-danger btn-round">Update</a>                           -->       
+                        <input type="button" value="Update" class="btn btn-danger btn-round" (click)="stock_onclick()" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info">
+                    <div class="icon icon-danger">
+                        <i class="nc-icon nc-bulb-63"></i>
+                    </div>
+                    <div class="description">
+                        <h5 class="info-title">{{'請求データ'}}</h5>
+                        <!-- <a routerLink = "billing-data" class="btn btn-danger btn-round">Update</a>     -->
+                        <input type="button" value="Update" class="btn btn-danger btn-round" (click)="billing_onclick()" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info">
+                    <div class="icon icon-danger">
+                        <i class="nc-icon nc-chart-bar-32"></i>
+                    </div>
+                    <div class="description">
+                        <h5 class="info-title">{{'債務データ'}}</h5>
+                        <!-- <a routerLink = "debt-data" class="btn btn-danger btn-round">Update</a>   -->
+                        <input type="button" value="Update" class="btn btn-danger btn-round" (click)="debt_onclick()" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2023 xxxx, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+</div>

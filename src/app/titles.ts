@@ -1,9 +1,9 @@
 export const titles = [
     {
-      id: 'tbd',
-      coverImage: './assets/img/DB_list.jpg',
-      name: 'DB登録一覧',
-      description: '登録されているDataBaseリストを照会',
+      id: 'data-update',
+      coverImage: './assets/img/Data_update.jpg',
+      name: 'データ更新',
+      description: '最新のBlockChainの結果よりDataBaseを更新',
   
     },
     {

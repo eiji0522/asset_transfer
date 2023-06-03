@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import { ProductService } from '../shared/product.service';
-import { titles} from '../../titles';
 
 @Component({
   selector: 'app-db-analyze',
@@ -18,6 +17,5 @@ export class DbAnalyzeComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.titles = titles
   }
 }
